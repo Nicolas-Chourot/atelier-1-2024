@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "type":"module",
+  "type": "module",
+  "engines": {
+    "node": "16.14.2"
+  },
   "dependencies": {
     "decode-uri-component": "^0.4.1",
     "filter-obj": "^5.1.0",
