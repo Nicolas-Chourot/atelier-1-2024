@@ -30,5 +30,6 @@ const server = http.createServer((req, res) => {
         }
     }
 });
+console.log(`Version 0.01`);
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
