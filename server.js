@@ -3,7 +3,7 @@ import http from 'http';
 import querystring  from 'query-string';
 const server = http.createServer((req, res) => {
     console.log(req.url);
-    let reqInfo = { url: req.url, method: req.method, contentType: req.headers['content-type'] };
+    let reqInfo = { url: req.url, method: req.method, contentType: "text/html"/*req.headers['content-type']*/ };
 
     res.writeHead(200, { "Content-Type": "application/json" });
     if (req.method == 'GET') {
@@ -32,4 +32,4 @@ const server = http.createServer((req, res) => {
 });
 console.log(`Version 0.01`);
 const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`API Server running on port ${PORT}`));
