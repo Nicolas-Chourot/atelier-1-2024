@@ -5,7 +5,7 @@ const server = http.createServer((req, res) => {
     console.log(req.url);
     let reqInfo = { url: req.url, method: req.method, contentType: "application/json"/*req.headers['content-type']*/ };
 
-    res.writeHead(200, { "Content-Type": "application/json" });
+    res.writeHead(200, { "Content-Type": "text/html" });
     if (req.method == 'GET') {
         res.end(JSON.stringify(reqInfo));
     } else {
