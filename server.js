@@ -3,9 +3,9 @@ import http from 'http';
 import querystring  from 'query-string';
 const server = http.createServer((req, res) => {
     console.log(req.url);
-    let reqInfo = { url: req.url, method: req.method, contentType: "application/json"/*req.headers['content-type']*/ };
+    let reqInfo = { url: req.url, method: req.method, contentType: "text/html"/*req.headers['content-type']*/ };
 
-    res.writeHead(200, { "Content-Type": "text/html" });
+    res.writeHead(200, { "Content-Type": "application/json" });
     if (req.method == 'GET') {
         res.end(JSON.stringify(reqInfo));
     } else {
