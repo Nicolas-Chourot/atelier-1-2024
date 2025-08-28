@@ -3,7 +3,7 @@ import http from 'http';
 import querystring  from 'query-string';
 const server = http.createServer((req, res) => {
     console.log(req.url);
-    let reqInfo = { url: req.url, method: req.method, contentType: req.headers['content-type'], API_Server_Version: "Beta 1.4" };
+    let reqInfo = { url: req.url, method: req.method, contentType: req.headers['content-type'], API_Server_Version: "Beta 1.5" };
 
     res.writeHead(200, { "Content-Type": "application/json" });
     if (req.method == 'GET') {
